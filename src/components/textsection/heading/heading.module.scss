@@ -1,0 +1,10 @@
+@import '../../../styles/colors';
+
+.heading {
+  margin-bottom: -0.5em;
+  color: $secondary-1;
+  font-size: 1em; // em since parent element (textsection) uses rem and media query scaling
+  font-weight: 600;
+  line-height: 140%;
+  text-align: left;
+}

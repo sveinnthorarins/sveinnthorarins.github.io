@@ -1,0 +1,11 @@
+.showcase {
+  width: 100%;
+}
+
+.showcase__flexrows {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 104%;
+  margin: 0 -2%;
+}

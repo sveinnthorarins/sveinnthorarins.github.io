@@ -1,0 +1,7 @@
+@import '../../../styles/colors';
+
+.text {
+  color: $primary-1;
+  font-size: 1em; // em since parent element (textsection) uses rem and media query scaling
+  line-height: 150%;
+}

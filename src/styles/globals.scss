@@ -1,0 +1,59 @@
+@import 'colors';
+
+@font-face {
+  font-family: 'Hyperspace Race';
+  src: url('../../public/fonts/HyperspaceRace/HyperspaceRace-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hyperspace Race';
+  src: url('../../public/fonts/HyperspaceRace/HyperspaceRace-Bold.otf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../../public/fonts/Raleway/Raleway-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../../public/fonts/Raleway/Raleway-SemiBold.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../../public/fonts/Raleway/Raleway-Bold.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+html {
+  background-color: $primary-1;
+  margin: 0;
+  font-size: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: $secondary-1;
+  text-decoration: none;
+
+  &:hover {
+    color: $secondary-2;
+  }
+}

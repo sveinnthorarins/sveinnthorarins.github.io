@@ -1,0 +1,47 @@
+@import '@/styles/colors';
+
+.hsocials {
+  display: flex;
+  flex-direction: row;
+}
+
+.vsocials {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  // this is max-size
+  // will be changed on smaller screens via media query
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+
+  svg {
+    fill: $secondary-1;
+  }
+
+  &:hover {
+    transform: scale(1.04);
+
+    svg > path {
+      fill: $secondary-2;
+    }
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  .button {
+    width: 32px;
+    height: 32px;
+    margin: 0 8px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .button {
+    width: 24px;
+    height: 24px;
+    margin: 0 6px;
+  }
+}

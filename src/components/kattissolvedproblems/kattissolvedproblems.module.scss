@@ -1,0 +1,81 @@
+@import '@/styles/colors';
+
+.message {
+  width: 100%;
+  margin: 0;
+  padding: 5% 0;
+  color: $primary-1;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.problem {
+  display: block;
+  color: $secondary-1;
+  font-size: 1.5rem;
+  text-decoration: none;
+  line-height: 140%;
+}
+
+@media screen and (max-width: 3200px) {
+  .message {
+    font-size: 1.25rem;
+  }
+  .problem {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 2400px) {
+  .problem {
+    font-size: 1.125rem;
+  }
+  .message {
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .problem {
+    font-size: 1rem;
+  }
+  .message {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .problem {
+    padding: 0 6%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .problem {
+    font-size: 0.875rem;
+  }
+  .message {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .problem {
+    font-size: 0.75rem;
+  }
+  .message {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .problem {
+    padding: 0 2%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .problem {
+    padding: 0;
+  }
+}

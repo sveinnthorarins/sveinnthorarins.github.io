@@ -1,0 +1,8 @@
+@import '../../../styles/colors';
+
+.title {
+  color: $secondary-1;
+  font-size: 2em; // em since parent element (textsection) uses rem and media query scaling
+  font-weight: 600;
+  text-align: center;
+}

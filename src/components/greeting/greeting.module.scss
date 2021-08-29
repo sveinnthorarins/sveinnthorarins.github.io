@@ -1,0 +1,72 @@
+.line1 {
+  animation: rotate-color-theme 10s infinite;
+  animation-delay: -2s;
+}
+
+.line2 {
+  animation: rotate-color-theme 10s infinite;
+  animation-delay: -1.5s;
+}
+
+.line3 {
+  animation: rotate-color-theme 10s infinite;
+  animation-delay: -1s;
+}
+
+.line4 {
+  animation: rotate-color-theme 10s infinite;
+  animation-delay: -0.5ss;
+}
+
+.line5 {
+  animation: rotate-color-theme 10s infinite;
+}
+
+// old, decided not to use
+@keyframes rotate-color-wheel {
+  0% {
+    color: #ff33dd;
+  }
+  12.5% {
+    color: #ff3333;
+  }
+  25% {
+    color: #ff8000;
+  }
+  37.5% {
+    color: #ffff00;
+  }
+  50% {
+    color: #00ff00;
+  }
+  62.5% {
+    color: #00ffaa;
+  }
+  75% {
+    color: #33bbff;
+  }
+  87.5% {
+    color: #aa80ff;
+  }
+  100% {
+    color: #ff33dd;
+  }
+}
+
+@keyframes rotate-color-theme {
+  0% {
+    color: #1ab2ff;
+  }
+  25% {
+    color: #1aff8c;
+  }
+  50% {
+    color: #40ff1a;
+  }
+  75% {
+    color: #1aff8c;
+  }
+  100% {
+    color: #1ab2ff;
+  }
+}

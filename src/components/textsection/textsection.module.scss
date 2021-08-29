@@ -1,0 +1,50 @@
+.textsectioncontainer {
+  padding: 40px 0 0;
+  background-color: white;
+}
+
+.textsection {
+  width: 60%;
+  margin: 0 auto;
+  font-family: 'Raleway';
+  -webkit-font-feature-settings: 'lnum';
+  -moz-font-feature-settings: 'lnum';
+  font-feature-settings: 'lnum';
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 3200px) {
+  .textsection {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 2400px) {
+  .textsection {
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (max-width: 1620px) {
+  .textsection {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .textsection {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .textsection {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .textsection {
+    font-size: 0.875rem;
+  }
+}
