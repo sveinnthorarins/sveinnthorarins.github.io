@@ -51,7 +51,7 @@ export default function KattisSolvedProblems() {
     <MultiColumnList>
       {data && data.map((item): JSX.Element => {
         return (
-          <a className={styles.problem} href={item.href} key={item.id}>
+          <a className={styles.problem} href={item.href} key={item.id} target="_blank" rel="noreferrer">
             {item.name}
           </a>
         );
