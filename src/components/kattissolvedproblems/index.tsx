@@ -11,14 +11,14 @@ type KattisSolvedProblem = {
 export default function KattisSolvedProblems() {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
-  const [data, setData] = useState<[KattisSolvedProblem] | null>(null);
+  const [data, setData] = useState<KattisSolvedProblem[] | null>(null);
 
   useEffect(() => {
-    async function fetchData() {
-      setLoading(true);
-      setError(false);
+    async function fetchData(firstTime: boolean) {
+      if (firstTime) setLoading(true);
+      if (firstTime) setError(false);
 
-      let json;
+      let json: KattisSolvedProblem[];
       try {
         const result = await fetch('https://sveinnthorarins-kattis-scraper.herokuapp.com/');
         if (!result.ok) throw new Error('result not ok');
@@ -29,9 +29,16 @@ export default function KattisSolvedProblems() {
       } finally {
         setLoading(false);
       }
+      if (json[0].hasOwnProperty('refresh')) {
+        // list is old and server is refreshing it, should query again in a bit
+        // remove refresh notification object from array
+        json = json.splice(0, 1); // now json array contains the old list, not refreshed
+        // query again in 20 secs for the refreshed list
+        setTimeout(() => fetchData(false), 20000);
+      }
       setData(json);
     }
-    fetchData();
+    fetchData(true);
   }, []);
 
   if (error) {
