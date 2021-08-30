@@ -20,7 +20,7 @@ export default function KattisSolvedProblems() {
 
       let json;
       try {
-        const result = await fetch('http://sveinnthorarins-kattis-scraper.herokuapp.com/');
+        const result = await fetch('https://sveinnthorarins-kattis-scraper.herokuapp.com/');
         if (!result.ok) throw new Error('result not ok');
         json = await result.json();
       } catch (e) {
