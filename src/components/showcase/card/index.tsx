@@ -5,7 +5,7 @@ import Image from 'next/image';
 type ShowcaseCardProps = {
   title: string,
   href?: string,
-  imageSrc: StaticImageData,
+  imageSrc: any,
   imageAlt: string,
   imageUnoptimized?: boolean,
 };
