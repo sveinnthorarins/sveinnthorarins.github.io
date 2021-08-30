@@ -32,8 +32,8 @@ export default function Home() {
             Here are some of the best ones that I&apos;ve chosen to showcase:
           </TextSectionText>
           <Showcase>
-            <ShowcaseCard title="Ant Foraging Simulation" href="/project/ant-foraging-simulation" imageSrc={antsimPhoto} imageAlt="Ant simulation project in action" imageUnoptimized={true} />
-            <ShowcaseCard title="Minecraft Server Sleep Manager" href="/project/minecraft-server-sleep-manager" imageSrc={mssmPhoto} imageAlt="Console application icon" imageUnoptimized={true} />
+            <ShowcaseCard title="Ant Foraging Simulation" href="/project/ant-foraging-simulation" imageSrc={antsimPhoto} imageAlt="Ant simulation project in action" />
+            <ShowcaseCard title="Minecraft Server Sleep Manager" href="/project/minecraft-server-sleep-manager" imageSrc={mssmPhoto} imageAlt="Console application icon" />
           </Showcase>
         </TextSection>
         <TextSection>

@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import ProjectLayout from '@/components/projectlayout';
 import TextSectionHeading from '@/components/textsection/heading';
 import greenParticlesPhoto from '@/public/greenparticles.jpg';
@@ -37,13 +36,13 @@ export default function ProjectAntForagingSimulation() {
           </p>
           <div style={{ maxHeight: "5em", margin: "0 -0.2em", display: "flex", justifyContent: "space-evenly" }}>
             <div style={{ maxWidth: "7.5em", maxHeight: "5em", margin: "0 0.2em", borderRadius: "1.5em", overflow: "hidden" }}>
-              <Image src={greenParticlesPhoto} alt="Green food particles"/>
+              <img style={{ width: "100%", height: "100%" }} src={greenParticlesPhoto} alt="Green food particles"/>
             </div>
             <div style={{ maxWidth: "7.5em", maxHeight: "5em", margin: "0 0.2em", borderRadius: "1.5em", overflow: "hidden" }}>
-              <Image src={blueParticlesPhoto} alt="Blue pheromone particles"/>
+              <img style={{ width: "100%", height: "100%" }} src={blueParticlesPhoto} alt="Blue pheromone particles"/>
             </div>
             <div style={{ maxWidth: "7.5em", maxHeight: "5em", margin: "0 0.2em", borderRadius: "1.5em", overflow: "hidden" }}>
-              <Image src={orangeParticlesPhoto} alt="Orange pheromone particles"/>
+              <img style={{ width: "100%", height: "100%" }} src={orangeParticlesPhoto} alt="Orange pheromone particles"/>
             </div>
           </div>
           <TextSectionHeading>Interactivity</TextSectionHeading>
@@ -94,13 +93,13 @@ export default function ProjectAntForagingSimulation() {
           </p>
           <div style={{ maxHeight: "5em", margin: "0 -0.2em", display: "flex", justifyContent: "space-evenly" }}>
             <div style={{ maxWidth: "7.5em", maxHeight: "5em", margin: "0 0.2em", borderRadius: "1.5em", overflow: "hidden" }}>
-              <Image src={antSensorsPhoto} alt="Ant sensors"/>
+              <img style={{ width: "100%", height: "100%" }} src={antSensorsPhoto} alt="Ant sensors"/>
             </div>
             <div style={{ maxWidth: "7.5em", maxHeight: "5em", margin: "0 0.2em", borderRadius: "1.5em", overflow: "hidden" }}>
-              <Image src={antCirclePhoto} alt="Ant vision range"/>
+              <img style={{ width: "100%", height: "100%" }} src={antCirclePhoto} alt="Ant vision range"/>
             </div>
             <div style={{ maxWidth: "7.5em", maxHeight: "5em", margin: "0 0.2em", borderRadius: "1.5em", overflow: "hidden" }}>
-              <Image src={antCircleSensorsPhoto} alt="Ant vision range and sensors"/>
+              <img style={{ width: "100%", height: "100%" }} src={antCircleSensorsPhoto} alt="Ant vision range and sensors"/>
             </div>
           </div>
         </ProjectLayout>
