@@ -12,9 +12,24 @@
     transform: scale(1.02);
   }
 
+  &:hover .card__codetag {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
   &:hover .card__title::after {
     transform: scaleX(1);
   }
+}
+
+.card__codetag {
+  font-size: 1rem;
+  width: fit-content;
+  position: absolute;
+  top: 0.75em;
+  right: 0.7em;
+  margin: 0;
+  opacity: 0;
 }
 
 .card__content {
@@ -53,6 +68,9 @@
   .card__title {
     font-size: 1.25rem;
   }
+  .card__codetag {
+    font-size: 0.8125rem;
+  }
 }
 
 @media screen and (max-width: 2600px) {
@@ -68,6 +86,9 @@
   .card__title {
     font-size: 1.25rem;
   }
+  .card__codetag {
+    font-size: 0.75rem;
+  }
 }
 
 @media screen and (max-width: 1800px) {
@@ -80,6 +101,9 @@
   .card__title {
     font-size: 1rem;
   }
+  .card__codetag {
+    font-size: 0.675rem;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -91,6 +115,10 @@
 @media screen and (max-width: 620px) {
   .card__title {
     font-size: 0.875rem;
+  }
+  .card__codetag {
+    font-size: 0.6rem;
+    opacity: 1;
   }
 }
 
