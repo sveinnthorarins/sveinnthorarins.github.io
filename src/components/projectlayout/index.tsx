@@ -5,6 +5,7 @@ import TextSection from '@/components/textsection';
 import TextSectionTitle from '@/components/textsection/title';
 import TextSectionText from '@/components/textsection/text';
 import Footer from '@/components/footer';
+import CodingLanguageTag from '@/components/codinglanguagetag';
 
 type ProjectLayoutProps = {
   title: string,
@@ -16,25 +17,6 @@ type ProjectLayoutProps = {
 };
 
 export default function ProjectLayout(props: PropsWithChildren<ProjectLayoutProps>) {
-  
-  const langTypescript = { title: 'TypeScript', style: styles.typescript };
-  const langPixijs = { title: 'PixiJS', style: styles.pixijs };
-  const langJavascript = { title: 'JavaScript', style: styles.javascript };
-  const langCpp = { title: 'C++', style: styles.cpp };
-  
-  const languageLookup: { [key: string]: { title: string, style: string } } = {
-    // entries only need to be lowercase since keys from props get converted to lowercase -> languageLookup[item.toLowerCase()]
-    'typescript': langTypescript,
-    'ts': langTypescript,
-    'pixijs': langPixijs,
-    'pixi': langPixijs,
-    'html': { title: 'HTML', style: styles.html },
-    'css': { title: 'CSS', style: styles.css },
-    'javascript': langJavascript,
-    'js': langJavascript,
-    'cpp': langCpp,
-    'c++': langCpp,
-  };
   
   return (
     <section className={styles.project}>
@@ -50,11 +32,7 @@ export default function ProjectLayout(props: PropsWithChildren<ProjectLayoutProp
         <TextSectionTitle>{props.title}</TextSectionTitle>
         <div className={styles.languages}>
           {props.codeLangOrTech.map((item, idx) => {
-            return (
-              <div className={`${styles.language} ${languageLookup[item.toLowerCase()] ? languageLookup[item.toLowerCase()].style : undefined}`} key={idx}>
-                {languageLookup[item.toLowerCase()] ? languageLookup[item.toLowerCase()].title : item}
-              </div>
-            );
+            return <CodingLanguageTag codeLangOrTech={item} key={idx} />;
           })}
         </div>
         <div className={styles.info}>
