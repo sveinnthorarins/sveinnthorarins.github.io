@@ -21,11 +21,11 @@
 }
 
 .arrowcontainer {
-  width: 60px;
-  height: 32px;
+  width: 72px;
+  height: 36px;
   position: absolute;
   bottom: 40px;
-  left: calc(50% - 30px);
+  left: calc(50% - 36px);
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -46,10 +46,10 @@
 }
 
 .arrow {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   transform-origin: center;
-  transform: rotate(45deg) translateX(-12px) translateY(-12px);
+  transform: rotate(45deg) translateX(-16px) translateY(-16px);
   border-right: 2px solid rgba(255, 255, 255, 0.9);
   border-bottom: 2px solid rgba(255, 255, 255, 0.9);
 }
@@ -87,5 +87,45 @@
   }
   .greeting {
     font-size: 5vw;
+  }
+}
+
+@media screen and (max-width: 2400px) {
+  .arrowcontainer {
+    width: 60px;
+    height: 32px;
+    left: calc(50% - 30px);
+  }
+  .arrow {
+    width: 40px;
+    height: 40px;
+    transform: rotate(45deg) translateX(-12px) translateY(-12px);
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .arrowcontainer {
+    width: 48px;
+    height: 28px;
+    left: calc(50% - 24px);
+  }
+  .arrow {
+    width: 32px;
+    height: 32px;
+    transform: rotate(45deg) translateX(-8px) translateY(-8px);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .arrowcontainer {
+    width: 36px;
+    height: 24px;
+    bottom: 32px;
+    left: calc(50% - 18px);
+  }
+  .arrow {
+    width: 24px;
+    height: 24px;
+    transform: rotate(45deg) translateX(-4px) translateY(-4px);
   }
 }
