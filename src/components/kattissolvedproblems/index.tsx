@@ -32,7 +32,7 @@ export default function KattisSolvedProblems() {
       if (json[0].hasOwnProperty('refresh')) {
         // list is old and server is refreshing it, should query again in a bit
         // remove refresh notification object from array
-        json = json.splice(0, 1); // now json array contains the old list, not refreshed
+        json.splice(0, 1); // now json array contains the old list, not refreshed
         // query again in 20 secs for the refreshed list
         setTimeout(() => fetchData(false), 20000);
       }
