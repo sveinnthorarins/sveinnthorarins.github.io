@@ -30,6 +30,19 @@
   justify-content: center;
   overflow: hidden;
   cursor: pointer;
+  transform: translateY(0px);
+  animation: verticalbob 3s infinite;
+}
+
+@keyframes verticalbob {
+  0%,
+  66.6666%,
+  100% {
+    transform: translateY(0px);
+  }
+  33.3333% {
+    transform: translateY(10px);
+  }
 }
 
 .arrow {
@@ -37,8 +50,8 @@
   height: 40px;
   transform-origin: center;
   transform: rotate(45deg) translateX(-12px) translateY(-12px);
-  border-right: 2px solid rgba(255, 255, 255, 0.8);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+  border-right: 2px solid rgba(255, 255, 255, 0.9);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.9);
 }
 
 .portrait {
