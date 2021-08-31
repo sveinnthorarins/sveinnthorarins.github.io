@@ -1,0 +1,44 @@
+@import '@/styles/colors';
+
+.language {
+  margin: 0.25em 0.375em;
+  padding: 0.375em 0.5em;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 1em;
+  color: white;
+  background-color: $secondary-1; // if language has no special class coloring it
+  border-color: $secondary-1; // if language has no special class coloring it
+}
+
+// special classes to color languages
+
+.typescript {
+  background-color: #2b7489;
+  border-color: #2b7489;
+}
+
+.pixijs {
+  background-color: #ea1e63;
+  border-color: #ea1e63;
+}
+
+.html {
+  background-color: #e34c26;
+  border-color: #e34c26;
+}
+
+.css {
+  background-color: #563d7c;
+  border-color: #563d7c;
+}
+
+.javascript {
+  background-color: #f1e05a;
+  border-color: #f1e05a;
+}
+
+.cpp {
+  background-color: #f34b7d;
+  border-color: #f34b7d;
+}
