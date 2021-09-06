@@ -1,6 +1,9 @@
 /out/
 DEPLOY
 
+# IDEs/editors
+.vscode
+
 # dependencies
 /node_modules
 /.pnp
