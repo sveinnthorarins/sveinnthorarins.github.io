@@ -1,11 +1,15 @@
 import styles from './kattissolvedproblems.module.scss';
 import { useState, useEffect } from 'react';
-import MultiColumnList from '@/components/multicolumnlist';
+import ScrollList from '@/components/scrolllist';
 
 type KattisSolvedProblem = {
-  id: number,
-  name: string,
-  href: string
+  id: number;
+  name: string;
+  href: string;
+  fastest: string;
+  mine: string;
+  topplace: string | null;
+  tophref: string | null;
 };
 
 export default function KattisSolvedProblems() {
@@ -18,25 +22,27 @@ export default function KattisSolvedProblems() {
       if (firstTime) setLoading(true);
       if (firstTime) setError(false);
 
+      let noRefresh = true;
       let json: KattisSolvedProblem[];
       try {
         const result = await fetch('https://sveinnthorarins-kattis-scraper.herokuapp.com/');
         if (!result.ok) throw new Error('result not ok');
         json = await result.json();
       } catch (e) {
-        setError(true);
+        if (firstTime) setError(true);
         return;
       } finally {
-        setLoading(false);
+        if (firstTime) setLoading(false);
       }
       if (json[0].hasOwnProperty('refresh')) {
         // list is old and server is refreshing it, should query again in a bit
         // remove refresh notification object from array
         json.splice(0, 1); // now json array contains the old list, not refreshed
-        // query again in 20 secs for the refreshed list
-        setTimeout(() => fetchData(false), 20000);
+        // query again in 60 secs for the refreshed list
+        noRefresh = false;
+        setTimeout(() => fetchData(false), 60000);
       }
-      setData(json);
+      if (firstTime || noRefresh) setData(json);
     }
     fetchData(true);
   }, []);
@@ -52,17 +58,40 @@ export default function KattisSolvedProblems() {
   if (!data) {
     return <p className={styles.message}>No solved problems.</p>;
   }
-  
-  
+
   return (
-    <MultiColumnList>
-      {data && data.map((item): JSX.Element => {
-        return (
-          <a className={styles.problem} href={item.href} key={item.id} target="_blank" rel="noreferrer">
-            {item.name}
-          </a>
-        );
-      })}
-    </MultiColumnList>
-  )
+    <ScrollList>
+      <table className={styles.table}>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Fastest</th>
+            <th>Mine</th>
+            <th>&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data &&
+            data.map((item): JSX.Element => {
+              return (
+                <tr className={styles.problem} key={item.id}>
+                  <td>
+                    <a href={item.href} target="_blank" rel="noreferrer">
+                      {item.name}
+                    </a>
+                  </td>
+                  <td>{item.fastest}</td>
+                  <td>{item.mine}</td>
+                  <td>
+                    {item.topplace === null || item.tophref === null ? undefined : (
+                      <a href={item.tophref} target="_blank" rel="noreferrer">{`Top ${item.topplace}`}</a>
+                    )}
+                  </td>
+                </tr>
+              );
+            })}
+        </tbody>
+      </table>
+    </ScrollList>
+  );
 }

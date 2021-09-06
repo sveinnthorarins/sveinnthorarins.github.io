@@ -1,0 +1,27 @@
+@import '@/styles/colors';
+
+.wrapper {
+  width: 100%;
+  background-color: #f8fafc;
+  padding: 2%;
+  font-size: 0.875em;
+}
+
+.list {
+  width: 100%;
+  height: 35vh;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0.375em;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 1em;
+    background-color: $secondary-2;
+    box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.2);
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 1em;
+    background-color: #e6f0f4;
+  }
+}

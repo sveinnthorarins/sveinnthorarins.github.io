@@ -1,8 +1,7 @@
-import styles from './multicolumnlist.module.scss';
+import styles from './scrolllist.module.scss';
 import { PropsWithChildren } from 'react';
 
-
-export default function MultiColumnList(props: PropsWithChildren<{}>) {
+export default function ScrollList(props: PropsWithChildren<{}>) {
   
   return (
     <div className={styles.wrapper}>

@@ -10,11 +10,33 @@
 }
 
 .problem {
-  display: block;
-  color: $secondary-1;
+  width: 100%;
   font-size: 1.5rem;
-  text-decoration: none;
   line-height: 140%;
+}
+
+.table {
+  width: 100%;
+  color: $primary-secondary-bridge;
+  vertical-align: middle;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: none;
+
+  th {
+    font-weight: 600;
+    text-align: left;
+    padding-bottom: 0.2em;
+  }
+
+  td {
+    text-align: left;
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      font-family: 'Open Sans';
+    }
+  }
 }
 
 @media screen and (max-width: 3200px) {
@@ -44,12 +66,6 @@
   }
 }
 
-@media screen and (max-width: 740px) {
-  .problem {
-    padding: 0 6%;
-  }
-}
-
 @media screen and (max-width: 620px) {
   .problem {
     font-size: 0.875rem;
@@ -65,17 +81,5 @@
   }
   .message {
     font-size: 0.75rem;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .problem {
-    padding: 0 2%;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .problem {
-    padding: 0;
   }
 }
