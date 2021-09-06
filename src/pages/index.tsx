@@ -27,8 +27,8 @@ export default function Home() {
           <TextSectionTitle>Personal Projects</TextSectionTitle>
           <TextSectionText>
             In my spare time I enjoy turning my ideas and curiosities into personal programming projects. 
-            Sometimes the projects make my life easier in some way and other times they are just for the purpose of fun and learning. 
-            Most of these personal programming endeavours of mine are publicly accessible on <a href="https://github.com/sveinnthorarins" rel="noreferrer" target="_blank">my GitHub</a>. 
+            Some projects make my life easier in some way and others are solely for the purpose of fun and learning. 
+            Most of these programming endeavours of mine are publicly accessible on <a href="https://github.com/sveinnthorarins" rel="noreferrer" target="_blank">my GitHub</a>. 
             Here are some of the best ones that I&apos;ve chosen to showcase:
           </TextSectionText>
           <Showcase>
