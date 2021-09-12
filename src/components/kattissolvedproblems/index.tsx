@@ -52,7 +52,45 @@ export default function KattisSolvedProblems() {
   }
 
   if (loading) {
-    return <p className={styles.message}>Fetching...</p>;
+    // display loading skeleton
+    return (
+      <ScrollList>
+        <table className={styles.table}>
+          <thead>
+            <tr>
+              <th>
+                <div className={styles.skeleton__fitcontent}>Name</div>
+              </th>
+              <th>
+                <div className={styles.skeleton__fitcontent}>Fastest</div>
+              </th>
+              <th>
+                <div className={styles.skeleton__fitcontent}>Min&nbsp;&nbsp;</div>
+              </th>
+              <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            {Array(15).fill(null).map((_item, idx) => {
+              return (
+                <tr key={idx}>
+                  <td>
+                    <div className={styles.skeleton__long}>&nbsp;</div>
+                  </td>
+                  <td>
+                    <div className={styles.skeleton__fitcontent}>0.00&nbsp;s</div>
+                  </td>
+                  <td>
+                    <div className={styles.skeleton__fitcontent}>0.00&nbsp;s</div>
+                  </td>
+                  <td>&nbsp;</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </ScrollList>
+    );
   }
 
   if (!data) {
@@ -72,9 +110,9 @@ export default function KattisSolvedProblems() {
         </thead>
         <tbody>
           {data &&
-            data.map((item): JSX.Element => {
+            data.map((item) => {
               return (
-                <tr className={styles.problem} key={item.id}>
+                <tr key={item.id}>
                   <td>
                     <a href={item.href} target="_blank" rel="noreferrer">
                       {item.name}
