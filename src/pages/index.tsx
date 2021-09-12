@@ -26,10 +26,10 @@ export default function Home() {
         <TextSection id="projects">
           <TextSectionTitle>Personal Projects</TextSectionTitle>
           <TextSectionText>
-            In my spare time I enjoy turning my ideas and curiosities into personal programming projects. 
+            In my spare time I enjoy turning my ideas and curiosities into programming projects. 
             Some projects make my life easier in some way and others are solely for the purpose of fun and learning. 
-            Most of these programming endeavours of mine are publicly accessible on <a href="https://github.com/sveinnthorarins" rel="noreferrer" target="_blank">my GitHub</a>. 
-            Here are some of the best ones that I&apos;ve chosen to showcase:
+            Here below you can find detailed information about some of my bigger projects.
+            Visit <a href="https://github.com/sveinnthorarins" rel="noreferrer" target="_blank">my GitHub</a> for a more comprehensive list including smaller projects.
           </TextSectionText>
           <Showcase>
             <ShowcaseCard title="Ant Foraging Simulation" codeLangOrTech="typescript" href="/project/ant-foraging-simulation" imageSrc={antsimPhoto} imageAlt="Ant simulation project in action" />
@@ -42,7 +42,7 @@ export default function Home() {
             I also love taking a crack at solving complex coding problems.
             The feeling you get when you finally solve an extremely hard problem that you&apos;ve been thinking about for days is just so thrilling!
             I&apos;ve found that the best sources of such problems are online judge platforms for competitive programming.
-            Here below you can see a daily-updated list of the problems I&apos;ve solved (using C++) on the online judge platform <a href="https://www.kattis.com/" rel="noreferrer" target="_blank">Kattis</a>:
+            Here below you can see a daily-updated list of the problems I&apos;ve solved (using C++) on the online judge platform <a href="https://www.kattis.com/" rel="noreferrer" target="_blank">Kattis</a>.
           </TextSectionText>
           <KattisSolvedProblems />
         </TextSection>
