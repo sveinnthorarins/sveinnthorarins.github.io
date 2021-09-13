@@ -1,4 +1,5 @@
 @import '@/styles/colors';
+@import '@/styles/sizes';
 
 .wrapper {
   background-color: $primary-1;
@@ -6,7 +7,7 @@
 
 .spacing {
   background-color: white;
-  height: 60px;
+  height: $gutter * 1.5;
 }
 
 .svg {
@@ -21,7 +22,7 @@
 }
 
 .footercontainer {
-  padding: 40px 0 10px;
+  padding: $gutter 0 $gutter * 0.25;
 }
 
 .footer {
@@ -31,7 +32,7 @@
 }
 
 .copyright {
-  margin: 40px 0 10px;
+  margin: $gutter 0 $gutter * 0.25;
   color: rgba(255, 255, 255, 0.35);
   font-family: 'Raleway';
   -webkit-font-feature-settings: 'lnum';
