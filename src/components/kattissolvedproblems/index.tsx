@@ -2,6 +2,11 @@ import styles from './kattissolvedproblems.module.scss';
 import { useState, useEffect } from 'react';
 import ScrollList from '@/components/scrolllist';
 
+type Response = {
+  old: boolean;
+  solvedProblems: KattisSolvedProblem[];
+}
+
 type KattisSolvedProblem = {
   id: number;
   name: string;
@@ -23,7 +28,7 @@ export default function KattisSolvedProblems() {
       if (firstTime) setError(false);
 
       let noRefresh = true;
-      let json: KattisSolvedProblem[];
+      let json: Response;
       try {
         const result = await fetch('https://sveinnthorarins-kattis-scraper.herokuapp.com/');
         if (!result.ok) throw new Error('result not ok');
@@ -34,15 +39,13 @@ export default function KattisSolvedProblems() {
       } finally {
         if (firstTime) setLoading(false);
       }
-      if (json[0].hasOwnProperty('refresh')) {
-        // list is old and server is refreshing it, should query again in a bit
-        // remove refresh notification object from array
-        json.splice(0, 1); // now json array contains the old list, not refreshed
-        // query again in 60 secs for the refreshed list
+      if (json.old) {
+        // list is old and server is refreshing it
+        // query again in 60 secs
         noRefresh = false;
         setTimeout(() => fetchData(false), 60000);
       }
-      if (firstTime || noRefresh) setData(json);
+      if (firstTime || noRefresh) setData(json.solvedProblems);
     }
     fetchData(true);
   }, []);
